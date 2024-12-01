@@ -44,7 +44,7 @@ function Footer() {
             ))}
           </ul>
         </div>
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-1 lg:grid-cols-3 max-sm:mb-10">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-1 max-xl:grid-cols-1 lg:grid-cols-3 max-sm:mb-10">
           <FooterLink heading="Quick Links" links={["About Us", "Features"]} />
           <FooterLink
             heading="Legal"

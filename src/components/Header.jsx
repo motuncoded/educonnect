@@ -7,7 +7,7 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-clr-background">
+    <header className="">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <div>
@@ -63,7 +63,7 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/faqs"
+                to="/faq"
                 className={({ isActive }) =>
                   isActive
                     ? "text-clr-primary border-b-2 border-clr-primary pb-1"

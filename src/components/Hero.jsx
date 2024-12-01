@@ -4,7 +4,7 @@ import { SiMoleculer } from "react-icons/si";
 import { PiAtomThin } from "react-icons/pi";
 import { CiGlobe } from "react-icons/ci";
 import { TbSquareRoot2 } from "react-icons/tb";
-
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 
 
@@ -100,8 +100,10 @@ function Hero() {
       
     
     },[])
+
+  const navigate = useNavigate();
     return (
-      <section className="container flex  flex-wrap justify-evenly items-center bg-gradient-to-r from-clr-background  via-clr-secondary-background  to-clr-surface   px-4 min-h-[90vh] max-xl:justify-start max-xl:py-8 ">
+      <section className=" flex  flex-wrap justify-evenly items-center bg-gradient-to-r from-clr-background  via-clr-secondary-background  to-clr-surface   px-4 min-h-[90vh] max-xl:justify-start max-xl:py-8 ">
         <div className="max-w-xl relative max-sm:py-20">
           <LiaBookSolid
             size="28"
@@ -128,7 +130,10 @@ function Hero() {
             academically.
           </h3>
 
-          <button className="signup-btn bg-clr-primary  text-clr-background border px-4 py-2  focus:outline-none focus:ring-2 rounded-2xl max-sm:w-[100%]">
+          <button
+            onClick={() => navigate("/signup")}
+            className="signup-btn bg-clr-primary  text-clr-background border px-4 py-2  focus:outline-none focus:ring-2 rounded-2xl max-sm:w-[100%]"
+          >
             Sign up for free
           </button>
           <SiMoleculer
