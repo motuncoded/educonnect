@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         clr: {
-          fill: "var(--background)",
+          base: "var(--base)",
+          background:"var(--background)",
           'secondary-background':"var(--background)",
           primary: "var(--primary)",
           surface: "var(--surface)",
@@ -17,8 +18,20 @@ module.exports = {
             primary: "var(--text-primary)",
             secondary: "var(--text-secondary)",
           },
+          icon:{
+            book: "var(--primary)",
+            globe:"var(--inverted)",
+            atom: "var(--success)",
+            molecule: "var(--warning)",
+            math: "var(--primary)",
+            menu:"var(--menu)",
+          }
         },
       },
+      // font: {
+      //     roboto:[ 'Roboto', 'Arial', 'sans-serif'],
+
+      // }
     },
   },
   plugins: [],
