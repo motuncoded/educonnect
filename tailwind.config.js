@@ -17,6 +17,7 @@ module.exports = {
           txt: {
             primary: "var(--text-primary)",
             secondary: "var(--text-secondary)",
+            tertiary:"var(--text-tertiary)"
           },
           icon:{
             book: "var(--primary)",
@@ -24,7 +25,7 @@ module.exports = {
             atom: "var(--success)",
             molecule: "var(--warning)",
             math: "var(--primary)",
-            menu:"var(--menu)",
+            menu:"var(--primary)",
           }
         },
       },

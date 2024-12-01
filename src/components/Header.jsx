@@ -34,7 +34,7 @@ function Navbar() {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } absolute sm:static top-[60px] left-0 w-full sm:w-auto bg-white sm:bg-transparent z-50  h-2/6 sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 p-6 sm:p-0 transition-all duration-300`}
+          } absolute sm:static top-[60px] left-0 w-full sm:w-auto bg-clr-background sm:bg-transparent z-50  h-2/6 sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 p-6 sm:p-0 transition-all duration-300`}
         >
           <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <li>
@@ -42,7 +42,7 @@ function Navbar() {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-clr-primary border-b-2 border-clr-primary pb-1"
+                    ? "text-clr-primary border-b-2 border-clr-primary pb-1 max-sm:border-none"
                     : "hover:text-clr-primary transition-colors"
                 }
               >

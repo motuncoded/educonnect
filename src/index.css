@@ -15,6 +15,7 @@
   --inverted:#7E57C2;
   --text-primary:#0E0E0E;
   --text-secondary:#9E9E9E;
+  --text-tertiary:#E8E8E8;
   
 
   }
@@ -41,12 +42,14 @@ body{
 
 ::-webkit-scrollbar-track {
   border-radius: 1px;  
+  background-color: var(--surface);
+  
 }
 
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--text-primary);
-  border: 1px solid var(--secondary-background); 
+  background-color: var(--base);
+  border: 1px solid var(--base); 
     border-radius: 10px;  
 
 }

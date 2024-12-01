@@ -4,7 +4,7 @@ import gsap from "gsap";
  const Testimonial = ({ testimony, name, country,image }) => {
 
    return (
-     <div className="testimonial bg-clr-surface h-[10rem] my-8 p-4 flex justify-start  rounded flex-col ">
+     <div className="testimonial bg-clr-surface h-auto my-8 p-4 flex justify-start  rounded-lg flex-col max-sm:my-2 ">
        <h3 className="mb-2 text-clr-txt-secondary  ">{testimony}</h3>
        <div className=" flex items-center space-x-4 mt-4 ">
          <img src={image} alt="woman " width="48" height="48" />
@@ -23,8 +23,8 @@ function HeroTestimonal() {
 
   return (
     <section className="flex justify-center items-center  flex-col  my-16 px-8">
-      <h2 className="text-3xl font-bold">Testimonials</h2>
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container ">
+      <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container  ">
         <Testimonial
           testimony="EduConnect transformed the way I study! I’ve never felt so supported in my learning journey."
           name="Jane A."
