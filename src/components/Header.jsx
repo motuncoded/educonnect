@@ -2,9 +2,13 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { LiaTimesSolid } from "react-icons/lia";
+import { useNavigate } from "react-router-dom";
+
+// Header section
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="">
@@ -90,10 +94,13 @@ function Navbar() {
 
         {/* Action Buttons */}
         <div className="hidden sm:flex space-x-4">
-          <button className="px-4 py-2 border border-clr-primary rounded-lg text-clr-primary transition">
+          <button className="px-4 py-2 border border-clr-btn-default  rounded-xl text-clr-primary transition hover:bg-clr-surface">
             Login
           </button>
-          <button className="px-4 py-2 bg-clr-primary text-clr-background rounded-lg  transition">
+          <button
+            onClick={() => navigate("/signup")}
+            className="px-4 py-2 bg-clr-btn-default hover:bg-clr-btn-hover text-clr-background rounded-xl  transition"
+          >
             Sign up
           </button>
         </div>

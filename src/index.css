@@ -1,57 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- @layer base{
-  :root{
 
-  --background:#ffffff;
-  --secondary-background:#fbfbfb;
-  --primary: #1E88E5;
-  --surface: #E3F2FD;
-  --base:#0D3960;
-  --success: #43A047;
-  --error: #FF0000;
-  --warning: #f59e0b;
-  --inverted:#7E57C2;
-  --text-primary:#0E0E0E;
-  --text-secondary:#9E9E9E;
-  --text-tertiary:#E8E8E8;
-  
+@layer base {
+  :root {
+    /* Colors for educonnect brand  */
 
+    --background: #ffffff;
+    --secondary-background: #fbfbfb;
+    --primary: #1e88e5;
+    --surface: #e3f2fd;
+    --base: #0d3960;
+    --success: #43a047;
+    --error: #ff0000;
+    --warning: #f59e0b;
+    --inverted: #7e57c2;
+    --hover:#4BA0EA;
+    --text-primary: #0e0e0e;
+    --text-secondary: #6A6A6A;
+    --text-tertiary: #e8e8e8;
   }
- }
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
 }
-body{
-    background-color: var(--background);
-    font-family: "Roboto", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container{
-      max-width: 1280px;
-       width:calc(100% -1rem);
-       margin:auto;
-
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 1280px;
+  width: calc(100% -1rem);
+  margin: auto;
 }
 ::-webkit-scrollbar {
-  width: 14px;  
-  height: 14px; 
+  width: 14px;
+  height: 14px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 1px;  
+  border-radius: 1px;
   background-color: var(--surface);
-  
 }
-
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--base);
-  border: 1px solid var(--base); 
-    border-radius: 10px;  
-
+  border: 1px solid var(--base);
+  border-radius: 10px;
 }
-
-

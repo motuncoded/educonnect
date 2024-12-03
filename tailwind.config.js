@@ -6,27 +6,27 @@ module.exports = {
       colors: {
         clr: {
           base: "var(--base)",
-          background:"var(--background)",
-          'secondary-background':"var(--background)",
+          background: "var(--background)",
+          "secondary-background": "var(--background)",
           primary: "var(--primary)",
           surface: "var(--surface)",
           accent: "var(--accent)",
           success: "var(--success)",
           error: "var(--error)",
           warning: "var(--warning)",
+          hover:"var(--hover)",
           txt: {
             primary: "var(--text-primary)",
             secondary: "var(--text-secondary)",
-            tertiary:"var(--text-tertiary)"
+            tertiary: "var(--text-tertiary)",
           },
-          icon:{
-            book: "var(--primary)",
-            globe:"var(--inverted)",
-            atom: "var(--success)",
-            molecule: "var(--warning)",
-            math: "var(--primary)",
+          icon: {
             menu:"var(--primary)",
-          }
+          },
+         btn:{
+            default:"var(--primary)",
+            hover:"var(--hover)"
+         },
         },
       },
       // font: {

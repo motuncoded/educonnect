@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import { LuFacebook } from "react-icons/lu";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom" 
 
-
-const FooterLink = ({heading, links}) => {
+const FooterLink = ({ heading, links }) => {      
   return (
     <div>
       <h3 className="text-xl font-medium mb-4 text-clr-background">
@@ -13,17 +13,45 @@ const FooterLink = ({heading, links}) => {
       <ul className=" flex flex-col">
         {links.map((link, index) => (
           <li key={index} className="mb-1">
-            <a href="#" className="hover:underline">
+            <Link to="/" className="hover:underline">
               {link}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
     </div>
   );
-  
-}
+};
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+ const handleSubmit = async (e) => {
+   e.preventDefault();
+
+   if (email.includes("@")) {
+     setMessage("Thanks for subscribing");
+     setEmail("")
+     
+   } else {
+            setMessage("Please enter a valid email address.");
+
+   }
+   
+
+  
+ };
+     useEffect(() => {  
+        if (message) {  
+            const timer = setTimeout(() => {  
+                setMessage('');  
+            }, 3000); 
+
+            return () => clearTimeout(timer);  
+        }  
+    }, [message]);  
+ 
+
   return (
     <footer className="bg-clr-base text-clr-txt-tertiary  py-8  px-2 max-xl:px-4">
       <div className="container flex justify-between  max-sm:flex-col max-sm:justify-start">
@@ -39,7 +67,9 @@ function Footer() {
                 key={index}
                 className="mr-6 bg-clr-surface text-clr-base rounded-full p-[.3rem]"
               >
-                {icon}
+                <a href="/" target="_blank" rel="noopener noreferrer">
+                  {icon}
+                </a>
               </li>
             ))}
           </ul>
@@ -52,19 +82,24 @@ function Footer() {
           />
           <FooterLink heading="Support" links={["FAQs", "Contact Us"]} />
         </div>
-        <div className="max-xl:flex flex-col">
+        <form onSubmit={handleSubmit} className="max-xl:flex flex-col">
           <label htmlFor="" className="sr-only">
             Subscribe
           </label>
           <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Subscribe for newsletter"
-            className="p-2  rounded-lg w-[300px] bg-transparent border-clr-txt-tertiary border-2  placeholder:text-clr-background "
+            className="p-2  rounded-lg w-[347px] bg-transparent border-clr-txt-tertiary border-[1px]  placeholder: text-clr-txt-tertiary max-sm:w-full  "
           />
 
-          <button className="bg-clr-primary  text-clr-background mx-4 px-4 py-2 focus:outline-none focus:ring-2 rounded-2xl max-sm:mx-0 max-sm:my-4 max-xl:mx-0 max-xl:my-4">
+          <button type="submit" className="bg-clr-btn-default hover:bg-clr-btn-hover mx-4 px-4 py-2  rounded-xl max-sm:mx-0 max-sm:my-4 max-xl:mx-0 max-xl:my-4">
             Subscribe
           </button>
-        </div>
+          {message && <p className="text-[1rem] p-2">{message}</p>}
+        </form>
       </div>
       <div className="container  text-center pt-8">
         <hr />

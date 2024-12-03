@@ -6,18 +6,17 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 function Home() {
-  return(
+  return (
     <>
-      <Header/>
-    <main>
-      <Hero/>
-      <HeroFeatures/>
-      <HeroTestimonial />
-      <Footer/>
-
-    </main>
+      <Header />
+      <main>
+        <Hero />
+        <HeroFeatures />
+        <HeroTestimonial />
+        <Footer />
+      </main>
     </>
-  )
+  );
 }
 
 export default Home;

@@ -1,25 +1,22 @@
-import React,{useEffect} from 'react'
-import gsap from "gsap";
 
- const Testimonial = ({ testimony, name, country,image }) => {
-
-   return (
-     <div className="testimonial bg-clr-surface h-auto my-8 p-4 flex justify-start  rounded-lg flex-col max-sm:my-2 ">
-       <h3 className="mb-2 text-clr-txt-secondary  ">{testimony}</h3>
-       <div className=" flex items-center space-x-4 mt-4 ">
-         <img src={image} alt="woman " width="48" height="48" />
-         <div>
-           <h4 className="text-xl font-normal">{name}</h4>
-           <h5 className="text-clr-txt-secondary">{country}</h5>
-         </div>
-       </div>
-     </div>
-   );
- };
+const Testimonial = ({ testimony, name, country, image }) => {
+  return (
+    <div className="testimonial bg-clr-surface h-auto my-8 p-4 flex justify-start  rounded-lg flex-col max-sm:my-2 ">
+      <h3 className="mb-2 text-clr-txt-secondary  ">{testimony}</h3>
+      <div className=" flex items-center space-x-4 mt-4 ">
+        <img src={image} alt="woman " width="48" height="48" />
+        <div>
+          <h4 className="text-xl font-normal">{name}</h4>
+          <h5 className="text-clr-txt-secondary">{country}</h5>
+        </div>
+      </div>
+    </div>
+  );
+};
 function HeroTestimonal() {
-  const Jane = "/woman.svg";
-  const Ahmad = "/man.svg";
-  const Lola = "/girl.svg";
+  const Jane = "/persons/woman.svg";
+  const Ahmad = "/persons/man.svg";
+  const Lola = "/persons/girl.svg";
 
   return (
     <section className="flex justify-center items-center  flex-col  my-16 px-8">
@@ -48,5 +45,4 @@ function HeroTestimonal() {
   );
 }
 
-export default HeroTestimonal
-
+export default HeroTestimonal;
