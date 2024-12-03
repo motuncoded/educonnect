@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
 
+// Faq page
 function Faq() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>;
 }
 
-export default Faq
+export default Faq;

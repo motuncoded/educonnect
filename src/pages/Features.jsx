@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Features() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <div></div>;
 }
 
-export default Features
+export default Features;
