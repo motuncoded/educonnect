@@ -1,29 +1,19 @@
 import SignLayout from "../components/SignLayout";
 
-//  Sign  up page
-function Signup() {
+//  Sign in page
+function Signin() {
   return (
     <SignLayout>
-      <div className="flex  flex-col border rounded-lg max-w-[34.25rem] w-[calc(100% - 2rem)] m-auto p-4 max-sm:max-w-[100%]">
+      <div className="flex  flex-col border rounded-lg  max-w-[34.25rem] w-[calc(100% - 2rem)] m-auto p-4 max-sm:max-w-[100%]">
         <h2 className="text-2xl font-bold mb-2 text-center ">
-          Join the EduConnect Community!
+          Welcome Back to EduConnect!{" "}
         </h2>
         <p className="text-clr-txt-secondary text-center text-[1rem]">
-          Create your free account today and start connecting with students. Ask
-          questions, share knowledge, and achieve your academic goals together.
+          Log in to continue your learning journey. Access your personalized
+          dashboard, connect with peers, and get answers to your study questions
+          anytime, anywhere.
         </p>
         <form className=" flex flex-col mx-10 my-4 max-sm:mx-0">
-          <label htmlFor="fullName" className="flex flex-col ">
-            Your Full Name
-            <input
-              type="text"
-              id="fullName"
-              name="FullName"
-              className="border w-[100%] p-2 rounded-md  mt-2"
-              placeholder="Enter your full name"
-            />
-          </label>
-          <br />
           <label htmlFor="fullName" className="flex flex-col "></label>
           Your Email Address
           <div className="border w-[100%] p-2 rounded-md   mt-2 flex justify-between items-center">
@@ -53,45 +43,19 @@ function Signup() {
             />
             <img src="/icons/view-off-slash.svg" alt="password-hide icon" />
           </div>
-          <br />
-          <label htmlFor="fullName" className="flex flex-col ">
-            Confirm Password
-          </label>
-          <div className="border w-[100%] p-2 rounded-md   mt-2 flex justify-between items-center">
-            <input
-              type="text"
-              id="confirmPassword"
-              name="confirmPassword"
-              placeholder="Confirm your password"
-            />
-            <img src="/icons/view-off-slash.svg" alt="password-hide icon" />
-          </div>
-          <div className="flex    my-6">
-            <label className="sr-only"></label>
-            <input
-              type="checkbox"
-              name=""
-              id=""
-              className="w-[18px] h-[18px] "
-            />
-            <p className=" leading-5 text-clr-txt-secondary pl-2">
-              I agree to the Terms and Conditions and Privacy Policy of
-              Educonnect.
-            </p>
-          </div>
           <div className="">
             <button
               type="submit"
               className="bg-clr-btn-default hover:bg-clr-btn-hover text-clr-background px-4 py-2  rounded-xl w-[100%]"
             >
-              Sign up
+              Log in
             </button>
           </div>
           <p className="font-bold my-6">
-            Already have an account?{" "}
-            <a href="/signin" className="text-clr-primary">
+            Don't have an account?{" "}
+            <a href="/signup" className="text-clr-primary">
               {" "}
-              Log in
+              Sign up
             </a>
           </p>
           <div class="flex items-center mb-6">
@@ -125,4 +89,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Signin;

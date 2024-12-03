@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <header className="">
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
+      <div className="container mx-auto flex justify-between items-center px-2 py-4">
         {/* Logo */}
         <div>
           <h1 className="text-2xl font-bold text-clr-primary">Educonnect</h1>
@@ -94,7 +94,10 @@ function Navbar() {
 
         {/* Action Buttons */}
         <div className="hidden sm:flex space-x-4">
-          <button className="px-4 py-2 border border-clr-btn-default  rounded-xl text-clr-primary transition hover:bg-clr-surface">
+          <button
+            onClick={() => navigate("/signin")}
+            className="px-4 py-2 border border-clr-btn-default  rounded-xl text-clr-primary transition hover:bg-clr-surface"
+          >
             Login
           </button>
           <button
