@@ -15,10 +15,11 @@
     --error: #ff0000;
     --warning: #f59e0b;
     --inverted: #7e57c2;
-    --hover:#4BA0EA;
+    --hover: #4ba0ea;
     --text-primary: #0e0e0e;
-    --text-secondary: #6A6A6A;
+    --text-secondary: #6a6a6a;
     --text-tertiary: #e8e8e8;
+    --border: #e1e1e1;
   }
 }
 * {

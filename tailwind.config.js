@@ -14,19 +14,20 @@ module.exports = {
           success: "var(--success)",
           error: "var(--error)",
           warning: "var(--warning)",
-          hover:"var(--hover)",
+          hover: "var(--hover)",
+          border: "var(--border)",
           txt: {
             primary: "var(--text-primary)",
             secondary: "var(--text-secondary)",
             tertiary: "var(--text-tertiary)",
           },
           icon: {
-            menu:"var(--primary)",
+            menu: "var(--primary)",
           },
-         btn:{
-            default:"var(--primary)",
-            hover:"var(--hover)"
-         },
+          btn: {
+            default: "var(--primary)",
+            hover: "var(--hover)",
+          },
         },
       },
       // font: {

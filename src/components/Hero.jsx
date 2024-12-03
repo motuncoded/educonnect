@@ -126,6 +126,7 @@ function Hero() {
 
         <button
           onClick={() => navigate("/signup")}
+          type="submit"
           className="signup-btn  bg-clr-btn-default hover:bg-clr-btn-hover text-clr-background px-4 py-2  rounded-xl max-sm:w-[100%]"
         >
           Sign up for free

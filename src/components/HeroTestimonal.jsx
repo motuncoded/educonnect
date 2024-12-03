@@ -1,4 +1,3 @@
-
 const Testimonial = ({ testimony, name, country, image }) => {
   return (
     <div className="testimonial bg-clr-surface h-auto my-8 p-4 flex justify-start  rounded-lg flex-col max-sm:my-2 ">

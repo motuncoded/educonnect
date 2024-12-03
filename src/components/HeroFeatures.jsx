@@ -16,11 +16,13 @@ const Feature = ({ icon, heading, paragraph }) => {
   }, []);
   return (
     <div className=" max-w-xl  w-5/6  h-auto my-8 max-sm:flex max-sm:justify-center max-sm:items-center max-sm:flex-col max-sm:w-full ">
-      <img src={icon}
+      <img
+        src={icon}
         ref={iconRef}
         className="mb-2 bg-clr-surface p-2  flex justify-center items-center  rounded-full "
-     aria-label={icon}
-     alt={icon}/>
+        aria-label={icon}
+        alt={icon}
+      />
       <h4 className="mb-2 font-medium text-[1.375rem]">{heading}</h4>
       <p className="font-normal tracking-[.5%] text-clr-txt-secondary text-[1rem] max-sm:text-center">
         {paragraph}
