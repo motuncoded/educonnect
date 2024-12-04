@@ -3,7 +3,7 @@ import AuthHeader from "./AuthHeader";
 const SignLayout = ({ children }) => {
   return (
     <div className="container py-4 ">
-     <AuthHeader/>
+      <AuthHeader />
       <div className="mx-8 relative max-sm:mx-4 ">
         <img
           src="icons/book.svg"

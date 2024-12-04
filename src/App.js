@@ -9,6 +9,10 @@ import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import NotFound from "./pages/NotFound";
 import VerifyAccount from "./components/VerifyAccount";
+import ForgetPassword from "./components/ForgetPassword";
+import VerifyConfirm from "./components/VerifyConfirm";
+import ResetPassword from "./components/ResetPassword";
+import PasswordReset from "./components/PasswordReset";
 
 function App() {
   return (
@@ -22,7 +26,10 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/verifyaccount" element={<VerifyAccount />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/forgetpassword" element={<ForgetPassword />} />
+        <Route path="/verifyconfirm" element={<VerifyConfirm />} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
+        <Route path="/passwordreset" element={<PasswordReset />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

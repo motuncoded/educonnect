@@ -8,7 +8,7 @@ function Signup() {
         <h2 className="text-3xl font-bold mt-4 mb-2 text-center ">
           Join the EduConnect Community!
         </h2>
-        <p className="text-clr-txt-secondary text-center text-[1rem]">
+        <p className="text-clr-txt-secondary  font-normal text-center text-[1rem]">
           Create your free account today and start connecting with students. Ask
           questions, share knowledge, and achieve your academic goals together.
         </p>
@@ -32,6 +32,7 @@ function Signup() {
               type="text"
               id="email"
               name="email"
+              className="outline-none"
               placeholder="Enter your email address"
             />
             <img
@@ -49,6 +50,7 @@ function Signup() {
               type="text"
               id="password"
               name="password"
+              className="outline-none"
               placeholder="Enter your password"
             />
             <img src="/icons/view-off-slash.svg" alt="password-hide icon" />
@@ -62,6 +64,7 @@ function Signup() {
               type="text"
               id="confirmPassword"
               name="confirmPassword"
+              className="outline-none"
               placeholder="Confirm your password"
             />
             <img src="/icons/view-off-slash.svg" alt="password-hide icon" />
@@ -87,7 +90,7 @@ function Signup() {
               Sign up
             </button>
           </div>
-          <p className="font-bold my-6">
+          <p className="font-medium my-6">
             Already have an account?{" "}
             <a href="/signin" className="text-clr-primary">
               {" "}

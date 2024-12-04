@@ -32,10 +32,12 @@ const Feature = ({ icon, heading, paragraph }) => {
 export default function HeroFeatures() {
   return (
     <section className="flex justify-evenly items-center flex-col  py-20 px-10  max-sm:items-center max-sm:my-12 max-xl:my-12 max-xl:items-start max-sm:px-4">
-      <h2 className="text-3xl font-bold mb-4 max-sm:text-center">Our Features</h2>
+      <h2 className="text-3xl font-bold mb-4 max-sm:text-center">
+        Our Features
+      </h2>
       <div className="flex justify-around items-center max-sm:flex-col max-xl:flex-col  gap-20 max-sm:gap-2 max-xl:gap-2">
         <div className="max-w-[50%] mt-2  max-sm:max-w-[100%] max-xl:max-w-[100%]">
-          <img src="/persons/learner.svg" alt="learner"  />
+          <img src="/persons/learner.svg" alt="learner" />
         </div>
         <div className="py-2 max-sm:py-0">
           <Feature

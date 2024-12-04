@@ -30,10 +30,9 @@ module.exports = {
           },
         },
       },
-      // font: {
-      //     roboto:[ 'Roboto', 'Arial', 'sans-serif'],
-
-      // }
+      font: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],

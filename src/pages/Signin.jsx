@@ -8,7 +8,7 @@ function Signin() {
         <h2 className="text-3xl font-bold mt-4 mb-2 text-center ">
           Welcome Back to EduConnect!{" "}
         </h2>
-        <p className="text-clr-txt-secondary text-center text-[1rem]">
+        <p className="text-clr-txt-secondary font-normal text-center text-[1rem]">
           Log in to continue your learning journey. Access your personalized
           dashboard, connect with peers, and get answers to your study questions
           anytime, anywhere.
@@ -22,6 +22,7 @@ function Signin() {
               type="text"
               id="email"
               name="email"
+              className="outline-none"
               placeholder="Enter your email address"
             />
             <img
@@ -39,11 +40,17 @@ function Signin() {
               type="text"
               id="password"
               name="password"
+              className="outline-none"
               placeholder="Enter your password"
             />
             <img src="/icons/view-off-slash.svg" alt="password-hide icon" />
           </div>
-          <a href="#" className="text-clr-primary my-6">Forget Password?</a>
+          <a
+            href="/forgetpassword"
+            className="text-clr-primary font-medium my-6"
+          >
+            Forget Password?
+          </a>
           <div className="">
             <button
               type="submit"
@@ -51,9 +58,8 @@ function Signin() {
             >
               Log in
             </button>
-
           </div>
-          <p className="font-bold my-6">
+          <p className="font-medium my-6">
             Don't have an account?{" "}
             <a href="/signup" className="text-clr-primary">
               {" "}
