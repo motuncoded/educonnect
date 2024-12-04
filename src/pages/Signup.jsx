@@ -5,14 +5,14 @@ function Signup() {
   return (
     <SignLayout>
       <div className="flex  flex-col border rounded-lg max-w-[34.25rem] w-[calc(100% - 2rem)] m-auto p-4 max-sm:max-w-[100%]">
-        <h2 className="text-2xl font-bold mb-2 text-center ">
+        <h2 className="text-3xl font-bold mt-4 mb-2 text-center ">
           Join the EduConnect Community!
         </h2>
         <p className="text-clr-txt-secondary text-center text-[1rem]">
           Create your free account today and start connecting with students. Ask
           questions, share knowledge, and achieve your academic goals together.
         </p>
-        <form className=" flex flex-col mx-10 my-4 max-sm:mx-0">
+        <form className=" flex flex-col mx-10 my-6 max-sm:mx-0 ">
           <label htmlFor="fullName" className="flex flex-col ">
             Your Full Name
             <input

@@ -5,7 +5,7 @@ function Signin() {
   return (
     <SignLayout>
       <div className="flex  flex-col border rounded-lg  max-w-[34.25rem] w-[calc(100% - 2rem)] m-auto p-4 max-sm:max-w-[100%]">
-        <h2 className="text-2xl font-bold mb-2 text-center ">
+        <h2 className="text-3xl font-bold mt-4 mb-2 text-center ">
           Welcome Back to EduConnect!{" "}
         </h2>
         <p className="text-clr-txt-secondary text-center text-[1rem]">
@@ -13,7 +13,7 @@ function Signin() {
           dashboard, connect with peers, and get answers to your study questions
           anytime, anywhere.
         </p>
-        <form className=" flex flex-col mx-10 my-4 max-sm:mx-0">
+        <form className=" flex flex-col mx-10 my-6 max-sm:mx-0">
           <label htmlFor="fullName" className="flex flex-col "></label>
           Your Email Address
           <div className="border w-[100%] p-2 rounded-md   mt-2 flex justify-between items-center">
@@ -43,6 +43,7 @@ function Signin() {
             />
             <img src="/icons/view-off-slash.svg" alt="password-hide icon" />
           </div>
+          <a href="#" className="text-clr-primary my-6">Forget Password?</a>
           <div className="">
             <button
               type="submit"
@@ -50,6 +51,7 @@ function Signin() {
             >
               Log in
             </button>
+
           </div>
           <p className="font-bold my-6">
             Don't have an account?{" "}
