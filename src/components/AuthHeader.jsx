@@ -2,7 +2,7 @@ import React from "react";
 
 function AuthHeader() {
   return (
-    <header className="px-4 py-6 h-[88px]">
+    <header className="container h-[108px] py-4 px-2">
       <h1 className="text-4xl font-bold text-clr-primary ">Educonnect</h1>
     </header>
   );

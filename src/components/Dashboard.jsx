@@ -1,8 +1,10 @@
 import React from 'react'
+import DashboardHeader from './DashboardHeader'
 
 function Dashboard() {
   return (
-    <div>
+      <div>
+          <DashboardHeader/>
       
     </div>
   )

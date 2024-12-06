@@ -2,7 +2,7 @@
 
 ### <i> A student knowledge hub for peer learning.</i>
 
-![Educonect](educonnect.png)
+![Educonect](educonnect-img.png)
 
 ## About ✍️
 

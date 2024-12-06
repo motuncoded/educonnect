@@ -15,7 +15,7 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center px-2 py-4">
         {/* Logo */}
         <div>
-          <Link to="/" className="text-2xl font-bold text-clr-primary">
+          <Link to="/" className="text-4xl font-bold text-clr-primary">
             Educonnect
           </Link>
         </div>
@@ -24,7 +24,7 @@ function Navbar() {
             isMenuOpen ? "block" : "hidden"
           } absolute sm:static top-[60px] left-0 w-full sm:w-auto bg-clr-background sm:bg-transparent z-50  h-4/6 sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 p-6 sm:p-0 transition-all duration-300`}
         >
-          <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-10">
             <li>
               <NavLink
                 to="/"

@@ -13,6 +13,7 @@ import ForgetPassword from "./components/ForgetPassword";
 import VerifyConfirm from "./components/VerifyConfirm";
 import ResetPassword from "./components/ResetPassword";
 import PasswordReset from "./components/PasswordReset";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/verifyconfirm" element={<VerifyConfirm />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>
