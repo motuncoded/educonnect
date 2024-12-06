@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Sidebar() {
+function Mathematics() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Sidebar() {
   )
 }
 
-export default Sidebar
+export default Mathematics
