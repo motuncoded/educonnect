@@ -18,9 +18,9 @@ function HeroTestimonal() {
   const Lola = "/persons/girl.svg";
 
   return (
-    <section className="flex justify-center items-center  flex-col  my-16 px-8">
+    <section className="flex justify-center items-center  flex-col  my-16 px-8 max-sm:px-4 max-sm:mx-4">
       <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
-      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container  ">
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3   ">
         <Testimonial
           testimony="EduConnect transformed the way I study! I’ve never felt so supported in my learning journey."
           name="Jane A."

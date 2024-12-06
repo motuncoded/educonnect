@@ -32,6 +32,7 @@ function ForgetPassword() {
               <img src="/icons/mail.svg" alt="mail icon" />
             </div>
             <button
+              onClick={() => navigate("/resetpassword")}
               type="submit"
               className=" mt-4 bg-clr-btn-default hover:bg-clr-btn-hover  text-clr-background px-4 py-2  rounded-xl w-[100%]"
             >

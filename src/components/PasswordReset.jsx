@@ -12,7 +12,7 @@ function PasswordReset() {
         <div className="w-[33.188rem]  border rounded-lg  flex  flex-col justify-center items-center py-10 px-8 max-sm:px-2  ">
           <img src="/icons/check-circle.svg" alt="check-circle icon" />
           <h2 className="text-4xl font-medium "> Password reset successful</h2>
-          <h3 className="text-clr-txt-secondary  text-center font-inter mt-1  ">
+          <h3 className="text-clr-txt-secondary  text-center font-inter mt-1      ">
             Congratulations! Your Password has been reset{" "}
           </h3>
 

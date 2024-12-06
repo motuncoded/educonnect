@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { LiaTimesSolid } from "react-icons/lia";
 import { useNavigate } from "react-router-dom";
@@ -15,30 +15,14 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center px-2 py-4">
         {/* Logo */}
         <div>
-          <h1 className="text-2xl font-bold text-clr-primary">Educonnect</h1>
+          <Link to="/" className="text-2xl font-bold text-clr-primary">
+            Educonnect
+          </Link>
         </div>
-
-        {/* Mobile Menu Button */}
-        <div className="sm:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-expanded={isMenuOpen}
-            aria-label="Toggle Menu"
-            className="focus:outline-none"
-          >
-            {isMenuOpen ? (
-              <LiaTimesSolid size="26" className="text-clr-icon-menu" />
-            ) : (
-              <AiOutlineMenu size="26" className="text-clr-icon-menu" />
-            )}
-          </button>
-        </div>
-
-        {/* Navigation Links */}
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } absolute sm:static top-[60px] left-0 w-full sm:w-auto bg-clr-background sm:bg-transparent z-50  h-2/6 sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 p-6 sm:p-0 transition-all duration-300`}
+          } absolute sm:static top-[60px] left-0 w-full sm:w-auto bg-clr-background sm:bg-transparent z-50  h-4/6 sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 p-6 sm:p-0 transition-all duration-300`}
         >
           <ul className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <li>
@@ -89,6 +73,30 @@ function Navbar() {
                 Contact Us
               </NavLink>
             </li>
+            <li className="md:hidden sm:hidden">
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-clr-primary border-b-2 border-clr-primary pb-1"
+                    : "hover:text-clr-primary transition-colors"
+                }
+              >
+                Login
+              </NavLink>
+            </li>
+            <li className="md:hidden sm:hidden">
+              <NavLink
+                to="/signup"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-clr-primary border-b-2 border-clr-primary pb-1"
+                    : "hover:text-clr-primary transition-colors "
+                }
+              >
+                Sign up
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
@@ -107,6 +115,24 @@ function Navbar() {
             Sign up
           </button>
         </div>
+
+        {/* Mobile Menu Button */}
+        <div className="sm:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle Menu"
+            className="focus:outline-none"
+          >
+            {isMenuOpen ? (
+              <LiaTimesSolid size="26" className="text-clr-icon-menu" />
+            ) : (
+              <AiOutlineMenu size="26" className="text-clr-icon-menu" />
+            )}
+          </button>
+        </div>
+
+        {/* Navigation Links */}
       </div>
     </header>
   );
