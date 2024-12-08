@@ -1,11 +1,10 @@
-
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { LiaTimesSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 
 function DashboardHeader() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className=" flex justify-between items-center  h-[112px] px-4">

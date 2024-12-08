@@ -19,8 +19,11 @@
     --text-primary: #0e0e0e;
     --text-secondary: #6a6a6a;
     --text-tertiary: #e8e8e8;
+        --text-accent:#999999;
+
     --border: #e1e1e1;
-    --search:#F5F5F5;
+    --search: #f5f5f5;
+    --select: #bababa;
   }
 }
 * {

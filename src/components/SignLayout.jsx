@@ -17,7 +17,7 @@ const SignLayout = ({ children }) => {
           className="math-icon absolute top-2 right-[100px]  font-thin text-clr-icon-math max-sm:hidden  max-xl:hidden"
           alt="math-icon"
         />
-        <main >{children}</main>
+        <main>{children}</main>
 
         <img
           src="/icons/globe.svg"

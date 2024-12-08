@@ -16,11 +16,15 @@ module.exports = {
           warning: "var(--warning)",
           hover: "var(--hover)",
           border: "var(--border)",
-          search:"var(--search)",
+          search: "var(--search)",
+          select: "var(--select)",
+
+
           txt: {
             primary: "var(--text-primary)",
             secondary: "var(--text-secondary)",
             tertiary: "var(--text-tertiary)",
+            accent:"var(--text-accent)"
           },
           icon: {
             menu: "var(--primary)",

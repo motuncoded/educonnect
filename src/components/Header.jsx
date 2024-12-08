@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink,Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { LiaTimesSolid } from "react-icons/lia";
 import { useNavigate } from "react-router-dom";
