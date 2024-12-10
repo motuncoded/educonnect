@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 
@@ -94,7 +94,7 @@ function Hero() {
 
   const navigate = useNavigate();
   return (
-    <section className=" flex  flex-wrap justify-evenly items-center bg-gradient-to-r from-clr-background  via-clr-secondary-background  to-clr-surface   px-4 min-h-[90vh] max-xl:justify-start max-xl:py-8 max-xl:px-8 ">
+    <section className=" flex  flex-wrap justify-evenly items-center bg-custom-gradient  px-4 min-h-[90vh] max-xl:justify-start max-xl:py-8 max-xl:px-8 ">
       <div className="max-w-xl relative max-sm:py-20">
         <img
           src="/icons/book.svg"

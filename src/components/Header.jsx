@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { LiaTimesSolid } from "react-icons/lia";
@@ -8,11 +8,26 @@ import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
   const navigate = useNavigate();
 
   return (
     <header className="">
-      <div className="container mx-auto flex justify-between items-center px-2 py-4">
+      <div className="container  mx-auto flex justify-between items-center px-2 py-4">
         {/* Logo */}
         <div>
           <Link to="/" className="text-4xl font-bold text-clr-primary">
@@ -20,6 +35,7 @@ function Navbar() {
           </Link>
         </div>
         <nav
+          ref={menuRef}
           className={`${
             isMenuOpen ? "block" : "hidden"
           } absolute sm:static top-[60px] left-0 w-full sm:w-auto bg-clr-background sm:bg-transparent z-50  h-4/6 sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 p-6 sm:p-0 transition-all duration-300`}
@@ -42,7 +58,7 @@ function Navbar() {
                 to="/features"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-clr-primary border-b-2 border-clr-primary pb-1"
+                    ? "text-clr-primary border-b-2 border-clr-primary pb-1 max-sm:border-none"
                     : "hover:text-clr-primary transition-colors"
                 }
               >
@@ -54,7 +70,7 @@ function Navbar() {
                 to="/faq"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-clr-primary border-b-2 border-clr-primary pb-1"
+                    ? "text-clr-primary border-b-2 border-clr-primary pb-1 max-sm:border-none"
                     : "hover:text-clr-primary transition-colors"
                 }
               >
@@ -66,7 +82,7 @@ function Navbar() {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-clr-primary border-b-2 border-clr-primary pb-1"
+                    ? "text-clr-primary border-b-2 border-clr-primary pb-1 max-sm:border-none"
                     : "hover:text-clr-primary transition-colors"
                 }
               >

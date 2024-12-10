@@ -1,0 +1,53 @@
+[
+  {
+    "label": "Mathematics",
+    "link": "/mathematics",
+    "img": "/subject-icons/math.svg",
+    "activeImg": "/subject-icon/math-active.svg"
+  },
+  {
+    "label": "Science",
+    "link": "/science",
+    "img": "/subject-icons/science.svg"
+  },
+  {
+    "label": "Literature",
+    "link": "/literature",
+    "img": "/subject-icons/literature.svg"
+  },
+  {
+    "label": "History",
+    "link": "/history",
+    "img": "/subject-icons/history.svg"
+  },
+  {
+    "label": "Languages",
+    "link": "/languages",
+    "img": "/subject-icons/language.svg"
+  },
+  {
+    "label": "Art",
+    "link": "/art",
+    "img": "/subject-icons/art.svg"
+  },
+  {
+    "label": "Physics",
+    "link": "/physics",
+    "img": "/subject-icons/physics.svg"
+  },
+  {
+    "label": "Computer",
+    "link": "/computer",
+    "img": "/subject-icons/computer.svg"
+  },
+  {
+    "label": "Health Science",
+    "link": "/health",
+    "img": "/subject-icons/health.svg"
+  },
+  {
+    "label": "Chemistry",
+    "link": "/chemistry",
+    "img": "/subject-icons/chemistry.svg"
+  }
+]

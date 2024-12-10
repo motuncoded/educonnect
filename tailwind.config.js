@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(257.6deg, #C2DFFA1A 10%, #FFFFFF 100%)",
+      },
       colors: {
         clr: {
           base: "var(--base)",
@@ -19,12 +23,11 @@ module.exports = {
           search: "var(--search)",
           select: "var(--select)",
 
-
           txt: {
             primary: "var(--text-primary)",
             secondary: "var(--text-secondary)",
             tertiary: "var(--text-tertiary)",
-            accent:"var(--text-accent)"
+            accent: "var(--text-accent)",
           },
           icon: {
             menu: "var(--primary)",

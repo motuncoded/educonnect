@@ -1,53 +1,20 @@
 import { NavLink } from "react-router-dom";
-
-const subjects = [
-  {
-    label: "Mathematics",
-    link: "/mathematics",
-    img: "/subject-icons/math.svg",
-    activeImg: "/subject-icon/math-active.svg",
-  },
-  { label: "Science", link: "/science", img: "/subject-icons/science.svg" },
-  {
-    label: "Literature",
-    link: "/literature",
-    img: "/subject-icons/literature.svg",
-  },
-  { label: "History", link: "/history", img: "/subject-icons/history.svg" },
-  {
-    label: "Languages",
-    link: "/languages",
-    img: "/subject-icons/language.svg",
-  },
-  { label: "Art", link: "/art", img: "/subject-icons/art.svg" },
-  { label: "Physics", link: "/physics", img: "/subject-icons/physics.svg" },
-  { label: "Computer", link: "/computer", img: "/subject-icons/computer.svg" },
-  {
-    label: "Health Science",
-    link: "/health",
-    img: "/subject-icons/health.svg",
-  },
-  {
-    label: "Chemistry",
-    link: "/chemistry",
-    img: "/subject-icons/chemistry.svg",
-  },
-];
+import subjects from "../json/subjects.json";
 
 function SubjectModal() {
   return (
-    <aside className="col-span-3 border p-4 rounded-lg bg-[#FCFEFF]">
+    <section className="max-sm:hidden col-span-3 h-[588px] border px-4 py-6 rounded-lg bg-[#FCFEFF]">
       <h2 className="font-medium text-[22px]">Subject Categories</h2>
       <ul className="my-6 px-4">
         {subjects.map((subject, id) => {
           return (
-            <li key={id} className="flex my-5">
+            <li key={id} className="flex my-2">
               <NavLink
                 to={subject.link}
                 className={({ isActive }) =>
                   isActive
                     ? "bg-clr-surface text-clr-base"
-                    : "flex text-clr-base text-[#999999]"
+                    : "flex  text-clr-txt-accent hover:bg-clr-surface px-4 py-2 rounded w-full transition-all"
                 }
               >
                 {({ isActive }) => (
@@ -65,7 +32,7 @@ function SubjectModal() {
           );
         })}
       </ul>
-    </aside>
+    </section>
   );
 }
 

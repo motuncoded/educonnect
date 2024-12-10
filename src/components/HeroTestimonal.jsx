@@ -1,6 +1,8 @@
+import React from "react";
+
 const Testimonial = ({ testimony, name, country, image }) => {
   return (
-    <div className="testimonial bg-clr-surface h-auto my-8 p-4 flex justify-start  rounded-lg flex-col max-sm:my-2 ">
+    <div className="testimonial bg-clr-surface h-auto my-8 p-4 flex justify-start  rounded-lg flex-col max-sm:my-2 max-sm:mx-4">
       <h3 className="mb-2 text-clr-txt-secondary  ">{testimony}</h3>
       <div className=" flex items-center space-x-4 mt-4 ">
         <img src={image} alt="woman " width="48" height="48" />
@@ -18,7 +20,7 @@ function HeroTestimonal() {
   const Lola = "/persons/girl.svg";
 
   return (
-    <section className="flex justify-center items-center  flex-col  my-16 px-8 max-sm:px-4 max-sm:mx-4">
+    <section className="container flex justify-center items-center  flex-col  my-16 px-8 max-sm:px-4  pb-4">
       <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3   ">
         <Testimonial

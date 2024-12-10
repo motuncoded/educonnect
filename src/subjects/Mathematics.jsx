@@ -1,7 +1,12 @@
 import React from "react";
+import SubjectModal from "../components/SubjectModal";
 
 function Mathematics() {
-  return <div></div>;
+  return (
+    <div>
+      <SubjectModal />
+    </div>
+  );
 }
 
 export default Mathematics;
