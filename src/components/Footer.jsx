@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { LuFacebook } from "react-icons/lu";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { supabase } from "../supabaseClient";  
 
 const FooterLink = ({ heading, links }) => {
   return (
@@ -23,28 +24,34 @@ const FooterLink = ({ heading, links }) => {
   );
 };
 function Footer() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+   const [email, setEmail] = useState("");
+   const [error, setError] = useState("");
+   const [success, setSuccess] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+   const handleSubmit = async (e) => {
+     e.preventDefault();
+     setError("");
+     setSuccess("");
 
-    if (email.includes("@")) {
-      setMessage("Thanks for subscribing");
-      setEmail("");
-    } else {
-      setMessage("Please enter a valid email address.");
-    }
-  };
-  useEffect(() => {
-    if (message) {
-      const timer = setTimeout(() => {
-        setMessage("");
-      }, 3000);
+     // Check if email is valid
+     if (!/\S+@\S+\.\S+/.test(email)) {
+       setError("Please enter a valid email");
+       return;
+     }
 
-      return () => clearTimeout(timer);
-    }
-  }, [message]);
+     // Insert email into Supabase
+     const { error: insertError } = await supabase
+       .from("subscribers")
+       .insert([{ email }]);
+
+     if (insertError) {
+       setError("Error subscribing to newsletter: " + insertError.message);
+     } else {
+       setSuccess("Thank you for subscribing!");
+       setEmail(""); // Clear the input field
+     }
+   };  
+
 
   return (
     <footer className="bg-clr-base text-clr-txt-tertiary  py-8  px-2 max-xl:px-4">
@@ -88,14 +95,14 @@ function Footer() {
             placeholder="Subscribe for newsletter"
             className="p-2  rounded-lg w-[347px] bg-transparent border-clr-txt-tertiary border-[1px]  placeholder: text-clr-txt-tertiary max-sm:w-full  "
           />
-
           <button
             type="submit"
             className="bg-clr-btn-default hover:bg-clr-btn-hover mx-4 px-4 py-2  rounded-xl max-sm:mx-0 max-sm:my-4 max-xl:mx-0 max-xl:my-4"
           >
             Subscribe
           </button>
-          {message && <p className="text-[1rem] p-2">{message}</p>}
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          {success && <p className="text-clr-success mx-2 my-3">{success}</p>}{" "}
         </form>
       </div>
       <div className="container  text-center pt-8">
